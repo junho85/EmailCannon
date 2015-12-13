@@ -1,3 +1,6 @@
+group = 'kr.pe.junho85.emailcannon'
+version = '0.0.1'
+
 buildscript {
     repositories {
         mavenLocal()
@@ -12,9 +15,9 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'maven'
-apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.sonarqube'
+apply plugin: 'spring-boot'
 
 ext {
     javaVersion='1.8'
@@ -22,8 +25,6 @@ ext {
 
 sourceCompatibility = javaVersion
 targetCompatibility = javaVersion
-
-version = '0.0.1'
 
 repositories {
     mavenLocal()
@@ -35,8 +36,10 @@ dependencies {
     // group:name:version
 
     // spring
-    compile("org.springframework.boot:spring-boot-starter-web:1.3.0.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-mail")
 
+    // test
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
 task wrapper(type: Wrapper) {
