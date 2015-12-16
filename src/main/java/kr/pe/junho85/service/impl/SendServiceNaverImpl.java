@@ -25,11 +25,6 @@ public class SendServiceNaverImpl implements SendService {
     public void send() {
         int port = 465;
 
-        String from = "jworld2000@naver.com";
-        String to = "junho85@daum.net";
-        String subject = "test naver mail subject";
-        String text = "test naver mail";
-
         Properties properties = new Properties();
         properties.put("mail.smtp.auth", true);
         properties.put("mail.smtp.host", host);

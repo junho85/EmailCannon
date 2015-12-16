@@ -3,7 +3,6 @@ package kr.pe.junho85.service.impl;
 import kr.pe.junho85.service.SendService;
 import kr.pe.junho85.util.SampleMailMessageFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.beans.propertyeditors.StringArrayPropertyEditor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
